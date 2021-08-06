@@ -1,0 +1,262 @@
+/* Importaciones */
+@import "colores.scss" ;
+
+/* estilos generales */
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+body {
+	background: $crema;
+}
+/* Variables */
+$alineacionLetra: center;
+
+/* Estilos menu */
+
+nav {
+	height: 80px;
+	background: #ccc;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding:  0px 50px 0px 100px;
+    .logo {
+        font-size: 25px;
+        color: black;
+        font-family: "Lobster";
+        
+    
+    }
+    ul{
+        display: flex;
+        list-style: none;
+    }
+    .menu-btn i{
+        color: #fff;
+        font-size: 22px;
+        cursor: pointer;
+        display: none;
+      }
+      input[type="checkbox"]{
+        display: none;
+      }
+      ul li {
+        margin: 0px 5px;
+    }
+    ul li a {
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 8px 10px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+    ul li a:hover,nav ul li a.active  {
+        color:#1b1b1b;
+        background: #EAE1D8;
+    }
+}
+
+/* Estilos Footer */
+.pie {
+
+    display: block;
+    margin: 5px;
+	text-align: center;
+    position: relative;
+    .pie__texto {
+        color: black;
+        margin-top: 15px;
+    }
+    }
+  
+/* Titulos */
+.tituloGaleria {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
+}
+.titulosDeSecciones {
+	display: block;
+	text-align: center;
+	animation: animacionAbuelo; 
+	animation-duration: 1s; 
+    .titulosDeSecciones:hover {
+        color: blue;
+    }
+}
+/* Estilos Main */
+.carousel {
+    margin: 40px;
+}
+/* imagenes */
+.gridGaleria__imagen {  
+    display: flex;
+    max-width: 100%;
+    height: 250px;
+    margin: 0px auto; 
+      }
+.imagenPrecio {
+    display: flex;
+    max-width: 100%;
+    height: 50px;
+    margin: 0px auto; 
+
+}
+.gridPortadaWeb {
+    display: grid;
+
+    .gridPortadaWeb__imagenAbuelo {
+    display: flex;
+    max-width: 100%;
+    height: 350px;
+    margin: 0px auto;
+    }
+    .gridPortadaWeb__tituloInicio{
+        margin: 25px;
+        padding: 15px;
+        animation: animacionAbuelo; 
+        animation-duration: 1s; 
+        text-align: center;
+        margin-top: 50px;
+        overflow: hidden;
+    }
+    @keyframes animacionAbuelo {
+        from {
+          margin-left: 50%;
+        }
+      
+        to {
+          margin-left: 0%;
+        }
+      }
+
+    
+    .gridPortadaWeb__textoWeb {
+    color: $colorCuerpo;
+    text-align: $alineacionLetra;
+    margin-right: 10px;
+    }
+}
+
+    .cajaPrecio {
+        background-color: #ccc;
+    }
+    
+    @media only screen and (max-width: 749px) {
+        nav .menu-btn i{
+            display: block;
+          }
+          #click:checked ~ .menu-btn i:before{
+            content: "\f00d";
+          }
+        nav ul {
+            position: fixed;
+            text-align: center;
+            top: 80px;
+            left: -100%;
+            background: #EAE1D8;
+            height: 100vh;
+            width: 100%;
+            display: block;
+            transition: all 0.3s ease;
+            
+        }
+        #click:checked ~ ul{
+            left: 0;
+          }
+        nav ul li{
+            margin: 40px 0px;
+        }
+        nav ul li a {
+            font-size: 20px;
+            display: block;
+        }
+        nav ul li a:hover,nav ul li a.active  {
+            color:#EAE1D8;
+            background: white;
+        }
+    
+        .gridPortadaWeb {
+            display: grid; 
+            grid-auto-columns: 1fr; 
+            grid-template-columns: 1fr; 
+            grid-template-rows: 1fr; 
+            gap: 0px 0px; 
+            grid-template-areas: 
+              "."; 
+          }
+        .contenedorPrecios {
+            display: grid;
+            grid-template-columns: 100px;
+            grid-template-rows: 350px 350px 350px;
+            gap: 0px 15px; 
+    
+        }
+        .gridGaleria {
+            display: grid; 
+            grid-auto-columns: 1fr; 
+            grid-template-columns: 1fr; 
+            grid-template-rows: 1fr; 
+            gap: 20px 0px; 
+            grid-template-areas: 
+                "."
+                ; 
+            width: 100%; 
+            height: 250px; 
+            margin: 20px;   
+        
+          }
+            }
+                        
+        
+    
+    @media only screen and (min-width: 750px) {
+        
+        .gridPortadaWeb {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            grid-template-rows: 1fr; 
+            gap: 0px 0px; 
+            grid-template-areas: 
+              ". ."; 
+          }
+          .textoWeb {
+              color: $colorCuerpo;
+              text-align: $alineacionLetra;
+            
+        }
+        .gridGaleria {
+            display: grid; 
+            grid-auto-flow: column dense; 
+            grid-auto-columns: 1fr; 
+            grid-template-columns: 1fr 1fr 1fr; 
+            grid-template-rows: 1fr; 
+            gap: 0px 0px; 
+            grid-template-areas: 
+              ". . ."; 
+            width: 100%; 
+            height: auto; 
+            }	
+        .contenedorPrecios {
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr; 
+        gap: 0px 15px; 
+        grid-template-areas: 
+          ". . ."; 
+          width: 100%;
+          height: 450px;
+      }
+    
+        
+    }	
+   	
+    
+
+

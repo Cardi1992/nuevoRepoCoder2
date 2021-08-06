@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Lucas" content="Estudiante de coderhouse">
+    <meta name="description" content="Posada de jose, alojamiento que se encuentra en San javier cordoba. Cuenta con habitaciones y cabañas.">
+    <title>La Posada de José</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+    <nav>
+    <div 
+        class="logo"> La Posada de José
+    </div>
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a  href="precios.html">Precios</a></li>
+            <li><a class="active"  href="reserva.html">Reserva</a></li>
+            <li><a  href="servicios.html">Servicios</a></li>
+            <li><a  href="ubicacion.html">Ubicación</a></li>
+        </ul>
+    </nav>
+    </header>
+ 
+   <div class="titulosDeSecciones">
+     <h1>Reserve hoy</h1>
+   </div >  
+ 
+   <div class="container">
+    <div class="row">
+        <div class="col">
+            <form action="">
+
+            <div class="mb-3"> 
+                <label class="form-label" for="nombre">Nombre Completo</label>
+                <input  class="form-control" type="text" id="nombre">
+                </div> 
+
+                <div class="mb-3"> 
+                <label class="form-label" for="Mail">Su mail</label>
+                <input class="form-control" type="Email" id="Mail">
+                </div> 
+                <div class="mb-3">
+                <label class="form-label" for="Inmueble">Escoja su inmueble</label>
+                <select class="form-control"  id="Inmueble">
+                <option value="1">Cabaña</option>
+                <option value="1">Departamento</option>
+                </select>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Desea recibir novedades?</label>
+                </div>
+                <div class="mb-3">
+                <label class="form-label" for="tel"> Su numero de telefono</label>
+                <input class="form-control"  type="phone" name="tel" id="telefono">
+                </div>
+                <div class="mb-3">
+                <label class="form-label" for="fecha"> Escoja su fecha</label>
+                <input class="form-control" type="date" name="fecha" id="fecha de reserva">
+            </div>
+            <div class="mb-3">
+                <textarea name="mensaje" class="form-control" placeholder="Deje su mensaje..." id="mensaje" cols="30" rows="10"></textarea>
+                </div>
+            
+                <input class="btn btn-primary" type="reset" value="Enviar Formulario">
+                <input class="btn btn-primary" type="submit" value="Limpiar Formulario"> 
+
+            </form>
+        </div> 
+
+             <div class="col">
+                 <img src="/medios/departamento.jpg" class="figure-img img-fluid rounded" alt="Contacto">     
+            </div>
+     </div> 
+     
+     .
+
+</div>
+<footer class="pie">
+    <p class="pie__texto">La Posada de José &copy Todos los derechos reservados. San Javier, Provincia de Córdoba,
+        Argentina. </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+crossorigin="anonymous"></script>
+</body>
+</html>
